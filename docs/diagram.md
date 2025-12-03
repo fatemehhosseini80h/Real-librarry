@@ -1,20 +1,22 @@
-`mermaid
+```mermaid
 erDiagram
     USER {
         int user_id PK
-        string name
+        string first_name
+        string last_name
         string email
     }
     BOOK {
         int book_id PK
+        string isbn
         string title
         string author
         string status
     }
     LOAN {
         int loan_id PK
-        date borrow_date
-        date return_date
+        date date_borrow
+        date date_return
     }
 
     USER ||--o{ LOAN : "borrows"
